@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+  background-color: #007CC7;
+  color: white;
+  overflow:hidden;
+}

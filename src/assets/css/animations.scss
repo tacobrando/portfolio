@@ -1,0 +1,106 @@
+.fade-in {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.hide {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
+.slide-top{
+  position:relative;
+  animation:animatetop 1.5s
+}
+@media only screen and (max-width: 1000px) {
+  .hide {
+    opacity: 1;
+    font-size: 1rem;
+  }
+  .fade-in-text {
+    opacity: 0;
+    animation-delay: 3s;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes animatetop{
+  from{
+    top:-300px;
+    opacity:0
+  } 
+  to{
+    top:0;
+    opacity:1
+  }
+}
+li:nth-child(1) > .fade-in {
+  animation-delay: 0.3s;
+}
+li:nth-child(2) > .fade-in {
+  animation-delay: 1s;
+}
+li:nth-child(3) > .fade-in{
+    animation-delay: 2s;
+}
+li:nth-child(4) > .fade-in{
+  animation-delay: 3s;
+}
+
+#arrow-btn > .fade-in {
+  animation-delay: 3s;
+}
+
+#arrow-btn:hover + .hide {
+  opacity: 1;
+}
+#back-btn:hover + .hide {
+  opacity: 1;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+.fade-enter-active,
+.fade-leave-active {
+  animation-name: fadeIn;
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease-in;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+.paused {
+  animation-play-state: paused;
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Oxchibus",
+    "description": "‘Oxford Chinese Businesses’ or ‘OXCHIBUS’ is a website dedicated to recording the history of the Chinese community in Oxfordshire, England. OXCHIBUS aims to record the history of Chinese owned businesses in Oxford between the year 1910 and 1990’s.",
+    "url": "https://oxchibus.co.uk",
+    "github": "https://github.com/tacobrando/OXCHIBUS",
+    "image": "oxchibus.png",
+    "types": [
+      "vuejs",
+      "tailwindcss",
+      "javascript",
+      "firebase"
+    ]
+  },
+  {
+    "title": "Pokedex",
+    "description": "A recreation of the Pokemon Brilliant Diamond pokedex. Utilises custom made SVGs for certain assets for the scrollbar, background etc. The application uses the PokeApi to gather data for the pokedex.",
+    "url": "https://pokedex-project-3244b.firebaseapp.com/",
+    "image": "pokedex.png",
+    "github": "https://github.com/tacobrando/pokedex-revised",
+    "types": [
+      "vuejs",
+      "tailwindcss",
+      "javascript"
+    ]
+  },
+  {
+    "title": "CS50x Final Project",
+    "description": "",
+    "image": "cs50.png",
+    "github": "https://github.com/tacobrando/CS50x-Final-Project",
+    "types": [
+      "vuejs",
+      "bootstrap",
+      "javascript",
+      "python",
+      "flask"
+    ]
+  }
+]
