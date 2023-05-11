@@ -1,6 +1,5 @@
 <script setup>
 import { onMounted } from 'vue';
-import router from '../../../router';
 import { useRoute } from 'vue-router';
 const props = defineProps({
   direction: {

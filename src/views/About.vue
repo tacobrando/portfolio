@@ -35,7 +35,7 @@
     >
     </path>
   </svg>
-  <p class="hide fade-in">Back</p>
+  <p class="hide">Back</p>
   </div>
     <h1 class="fade-in">This is an about page</h1>
   </div>

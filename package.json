@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "firebase": "^9.21.0",
     "node-sass": "^8.0.0",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2",

@@ -26,7 +26,7 @@
   },
   {
     "title": "CS50x Final Project",
-    "description": "",
+    "description": "The CS50 marketplace is my final project for CS50x. It is a simple e-commerce store for secondhand or homemade products. This is a fullstack application using Vue and Flask",
     "image": "cs50.png",
     "github": "https://github.com/tacobrando/CS50x-Final-Project",
     "types": [

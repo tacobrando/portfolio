@@ -44,24 +44,25 @@ function navigateBack() {
         >
         </path> 
       </svg>
-      <p class="hide fade-in">Back</p>   
+      <p class="hide">Back</p>   
     </div>
-    <span class="w-full text-center text-3xl font-bold pb-2">
-      <h1>Projects</h1>
+    <span class="w-full text-center text-3xl font-bold pb-2 fade-in">
+      <h1>Portfolio</h1>
     </span>
-    <div class="project-container flex flex-col items-center">
+    <div class="project-container flex flex-col items-center m-5">
       <ProjectCard 
-        v-for="(project, index) in projects" 
+        v-for="(project, index) in projects"
+        id="project-card"
         :key="index" 
         :data="project"
+        :index="index"
         :imageUrl="`../../assets/images/${project.image}`"
       />
     </div>
   </div>
 </template>
 <style>
-.project-container {
-  height: 93%;
+.portfolio {
   overflow: auto;
 }
 </style>

@@ -19,6 +19,9 @@
   .hide {
     opacity: 1;
     font-size: 1rem;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
   }
   .fade-in-text {
     opacity: 0;
@@ -62,6 +65,7 @@ li:nth-child(4) > .fade-in{
 #back-btn:hover + .hide {
   opacity: 1;
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
