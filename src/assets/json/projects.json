@@ -14,7 +14,7 @@
   },
   {
     "title": "Pokedex",
-    "description": "A recreation of the Pokemon Brilliant Diamond pokedex. Utilises custom made SVGs for certain assets for the scrollbar, background etc. The application uses the PokeApi to gather data for the pokedex.",
+    "description": "A recreation of the Pokemon Brilliant Diamond pokedex. Utilises custom made SVGs for certain assets for the scrollbar, background etc. The application uses the PokeApi to gather data for the pokedex. (Desktop only)",
     "url": "https://pokedex-project-3244b.firebaseapp.com/",
     "image": "pokedex.png",
     "github": "https://github.com/tacobrando/pokedex-revised",
@@ -31,6 +31,19 @@
     "github": "https://github.com/tacobrando/CS50x-Final-Project",
     "types": [
       "vuejs",
+      "bootstrap",
+      "javascript",
+      "python",
+      "flask"
+    ]
+  },
+  {
+    "title": "Lol Stats Checker",
+    "description": "LolStatsChecker is an app to search up League of Legends. The Riot api isn't accessible with calls to the frontend and require a secret key in order to work, therefore flask is used to handle the api calls, package and send information back to the frontend. The project allows you to search up any League of Legends username, select a region and show details of that players match history/level and etc.",
+    "image": "lolstats.png",
+    "github": "https://github.com/tacobrando/lol-stats-react",
+    "types": [
+      "react",
       "bootstrap",
       "javascript",
       "python",

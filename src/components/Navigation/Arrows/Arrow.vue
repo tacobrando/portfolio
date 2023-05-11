@@ -1,5 +1,4 @@
 <script setup>
-import { onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 const props = defineProps({
   direction: {
@@ -19,10 +18,13 @@ const props = defineProps({
 const route = useRoute()
 
 function routeHandler() {
-  if(route.path === "/" && props.direction === "right") {
-    document.getElementById("landing-page").classList.add("animate__fadeOutLeftBig")
-  } else if(route.path === "/" && props.direction === "left") {
-    document.getElementById("landing-page").classList.add("animate__fadeOutRightBig")
+  const landingPage = document.getElementById("landing-page")
+  if(route.path === "/" && props.direction == undefined) {
+    landingPage.classList.add("animate__fadeOutLeftBig")
+  } else if(route.path === "/" && props.direction === "rotate-180") {
+    landingPage.classList.add("animate__fadeOutRightBig")
+  } else if(route.path === "/" && props.direction === "rotate-90") {
+    landingPage.classList.add("animate__fadeOutUpBig")
   }
   setTimeout(() => {
     emit("routeHandler", props.slug)
@@ -31,12 +33,6 @@ function routeHandler() {
 
 const emit = defineEmits(['routeHandler'])
 
-onMounted(() => {
-  const arrowBtn = document.getElementById("arrow-btn")
-  if(props.direction == "left") {
-    arrowBtn.classList.add("rotate-180")
-  }
-})
 </script>
 <template>
   <div class="
@@ -50,6 +46,7 @@ onMounted(() => {
     <svg 
     id="arrow-btn"
     @click="routeHandler"
+    :class="direction"
     class="
       w-12 
       cursor-pointer 

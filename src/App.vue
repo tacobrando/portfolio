@@ -11,7 +11,7 @@ const route = useRoute()
   </div>
   <router-view 
     :key="route.path" 
-    class="bg-secondary h-screen text-primary" 
+    class="bg-secondary h-screen text-primary safari_only" 
   />
 </template>
 

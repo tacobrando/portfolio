@@ -1,5 +1,5 @@
 <template>
-  <div class="about animate__animated" id="about">
+  <div class="about animate__animated text-center" id="about">
     <div class="
     pointer 
     next-btn 
@@ -9,39 +9,73 @@
     items-center
   ">
     <svg 
-    id="back-btn"
-    @click="navigateBack"
-    class="
-      w-12 
-      cursor-pointer 
-      transform 
-      hover:text-gray-500
-      transition 
-      delay-75 
-      duration-200 
-      ease-in-out
-    " 
-    fill="none" 
-    stroke="currentColor" 
-    viewBox="0 0 24 24" 
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path 
-      class="fade-in"
-      stroke-linecap="round" 
-      stroke-linejoin="round" 
-      stroke-width="2" 
-      d="M9 5l7 7-7 7"
+      id="back-btn"
+      @click="navigateBack"
+      class="
+        w-12 
+        cursor-pointer 
+        transform 
+        hover:text-gray-500
+        transition 
+        delay-75 
+        duration-200 
+        ease-in-out
+        " 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24" 
+        xmlns="http://www.w3.org/2000/svg"
     >
-    </path>
-  </svg>
-  <p class="hide">Back</p>
-  </div>
-    <h1 class="fade-in">This is an about page</h1>
+      <path 
+        class="fade-in"
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        stroke-width="2" 
+        d="M9 5l7 7-7 7"
+      >
+      </path>
+    </svg>
+    <p class="hide">Back</p>
+    </div>
+    <div class="about-container flex flex-col items-center justify-center h-5/6 m-5 text-start">
+      <h3 class="text-3xl fade-in p-2">About Me</h3>
+      <span class="profile-image
+        about-card 
+        m-5
+        text-black 
+        flex
+        flex-row
+        justify-start
+        rounded
+        fade-in
+      ">
+          <img src="../assets/images/profile.png" alt="profile" 
+          class="rounded h-80 lg:hover:shadow-2xl
+          lg:hover:-translate-y-3 transition ease-in-out duration-200 delay-75 transform"
+          >
+          <span class="bg-white ml-5 rounded p-5 lg:hover:shadow-2xl flex flex-col justify-between
+          lg:hover:-translate-y-3 transition ease-in-out duration-200 delay-75 transform">
+            <p class="mb-3">
+              My name is Matthew Yiew-Tung Lee, and I am a recent graduate from Oxford Brookes University with a Bachelor of Science in Anthropology. I also completed an Integrated Foundation Degree from Goldsmiths, University of London, and an International Baccalaureate (IB) Diploma from Renaissance College in Hong Kong.
+            </p>
+            <p class="mb-3">
+              As for my skills, I have experience in web development, full-stack development, and programming languages such as JavaScript, Python, and HTML/CSS. I've also completed the CS50 Introduction to Computer Science course through HarvardX, earning a certificate in December 2022. My technical skills include Vue.js, React.js, Git, HTML5 & CSS, Tailwind, Bootstrap, Django, Flask, and Adonis.
+            </p>
+            <p class="mb-5"> 
+              In addition, I've had the opportunity to travel to different places, including Hong Kong, London, and Canada, where I currently reside. Overall, I am seeking an opportunity as a Junior Software Engineer or Web Developer to apply my technical knowledge and grow as an experienced software engineer.
+            </p>
+            <!-- <span class="text-4xl">
+              <i class="bi bi-linkedin cursor-pointer mr-2" style="color: #0072b1"></i>
+              <i class="bi bi-github cursor-pointer mr-2"></i>
+            </span> -->
+          </span>
+        </span>
+    </div>
   </div>
 </template>
 <script setup>
-import router from '../router';
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
 function navigateBack() {
   const about = document.getElementById("about")

@@ -1,7 +1,9 @@
 <script setup>
 import ProjectCard from '../components/Project/ProjectCard.vue';
 import projects from "../assets/json/projects.json"
-import router from '../router';
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 function navigateBack() {
   const portfolio = document.getElementById("portfolio-page")
