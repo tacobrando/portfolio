@@ -13,7 +13,6 @@
     ease-in-out
     items-center
     lg:hover:shadow-2xl
-    cursor-pointer
     lg:hover:-translate-y-3 
     transition
     rounded
