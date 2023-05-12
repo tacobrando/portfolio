@@ -14,6 +14,6 @@ html, body{
 
 @media screen and (max-width: 767px) {
   .safari_only {
-      padding-bottom: 65px;
+      padding-bottom: 80px;
   }
 }

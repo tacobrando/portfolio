@@ -48,7 +48,7 @@ function navigateBack() {
       </svg>
       <p class="hide">Back</p>   
     </div>
-    <span class="w-full text-center text-3xl font-bold pb-2 fade-in">
+    <span class="w-full text-center text-3xl pb-2 fade-in">
       <h1>Portfolio</h1>
     </span>
     <div class="project-container flex flex-col items-center m-5">

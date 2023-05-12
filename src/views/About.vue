@@ -37,7 +37,7 @@
     </svg>
     <p class="hide">Back</p>
     </div>
-    <span class="w-full text-center text-3xl font-bold pb-2 fade-in">
+    <span class="w-full text-center text-3xl pb-2 fade-in">
       <h3 class="text-3xl fade-in p-2">About Me</h3>
     </span>
     <div class="about-container flex flex-col items-center justify-center h-5/6 m-5 text-start">
@@ -66,10 +66,6 @@
             <p class="mb-5"> 
               In addition, I've had the opportunity to travel to different places, including Hong Kong, London, and Canada, where I currently reside. Overall, I am seeking an opportunity as a Junior Software Engineer or Web Developer to apply my technical knowledge and grow as an experienced software engineer.
             </p>
-            <!-- <span class="text-4xl">
-              <i class="bi bi-linkedin cursor-pointer mr-2" style="color: #0072b1"></i>
-              <i class="bi bi-github cursor-pointer mr-2"></i>
-            </span> -->
           </span>
         </span>
     </div>
