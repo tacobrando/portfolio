@@ -11,7 +11,7 @@ function navigateBack() {
   portfolio.style.overflow = 'hidden'
   setTimeout(() => {
     router.push("/")
-  }, 600)
+  }, 650)
 }
 </script>
 

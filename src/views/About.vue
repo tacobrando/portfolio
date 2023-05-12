@@ -1,5 +1,5 @@
 <template>
-  <div class="about animate__animated text-center" id="about">
+  <div class="about animate__animated text-center overflow-auto" id="about">
     <div class="
     pointer 
     next-btn 
@@ -37,8 +37,10 @@
     </svg>
     <p class="hide">Back</p>
     </div>
-    <div class="about-container flex flex-col items-center justify-center h-5/6 m-5 text-start">
+    <span class="w-full text-center text-3xl font-bold pb-2 fade-in">
       <h3 class="text-3xl fade-in p-2">About Me</h3>
+    </span>
+    <div class="about-container flex flex-col items-center justify-center h-5/6 m-5 text-start">
       <span class="profile-image
         about-card 
         m-5
@@ -53,7 +55,7 @@
           class="rounded h-80 lg:hover:shadow-2xl
           lg:hover:-translate-y-3 transition ease-in-out duration-200 delay-75 transform"
           >
-          <span class="bg-white ml-5 rounded p-5 lg:hover:shadow-2xl flex flex-col justify-between
+          <span class="bg-white lg:ml-5 rounded p-5 lg:hover:shadow-2xl flex flex-col justify-between
           lg:hover:-translate-y-3 transition ease-in-out duration-200 delay-75 transform">
             <p class="mb-3">
               My name is Matthew Yiew-Tung Lee, and I am a recent graduate from Oxford Brookes University with a Bachelor of Science in Anthropology. I also completed an Integrated Foundation Degree from Goldsmiths, University of London, and an International Baccalaureate (IB) Diploma from Renaissance College in Hong Kong.
@@ -86,3 +88,22 @@ function navigateBack() {
   }, 600)
 }
 </script>
+<style scoped lang="scss">
+@media only screen and (max-width: 1000px) {
+  .about-container {
+    height: auto;
+  }
+  .about-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 50%;
+      width: 50%;
+      margin-bottom: 20px;
+    }
+  }
+}
+</style>
