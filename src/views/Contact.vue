@@ -1,5 +1,5 @@
 <template>
-  <div class="social animate__animated fade-in hide-scrollbar" id="social">
+  <div class="social animate__animated fade-in overflow-auto safari_only" id="social">
     <div class="backBtn flex items-center justify-center p-2 pointer 
     next-btn 
     flex-col

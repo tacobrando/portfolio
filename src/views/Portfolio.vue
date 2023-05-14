@@ -16,7 +16,7 @@ function navigateBack() {
 </script>
 
 <template>
-  <div class="portfolio animate__animated flex flex-col hide-scrollbar" id="portfolio-page">
+  <div class="portfolio animate__animated flex flex-col overflow-auto" id="portfolio-page">
     <div class="backBtn flex items-center p-2">
       <svg 
         id="back-btn"

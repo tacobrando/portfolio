@@ -1,5 +1,5 @@
 <template>
-  <div class="about animate__animated text-center hide-scrollbar" id="about">
+  <div class="about animate__animated text-center overflow-auto" id="about">
     <div class="
     pointer 
     next-btn 

@@ -14,13 +14,11 @@ html, body{
 
 @media screen and (max-width: 767px) {
   .safari_only {
-      padding-bottom: 80px;
+      padding-bottom: 70px;
   }
 }
 
-.hide-scrollbar {
-  width: 100%;
-  overflow-y: scroll;
-  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
-  box-sizing: content-box;
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
