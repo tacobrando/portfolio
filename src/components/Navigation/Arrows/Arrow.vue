@@ -28,7 +28,7 @@ function routeHandler() {
   }
   setTimeout(() => {
     emit("routeHandler", props.slug)
-  }, 500)
+  }, 650)
 }
 
 const emit = defineEmits(['routeHandler'])

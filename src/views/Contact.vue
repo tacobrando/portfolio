@@ -1,5 +1,5 @@
 <template>
-  <div class="social animate__animated fade-in" id="social">
+  <div class="social animate__animated fade-in hide-scrollbar" id="social">
     <div class="backBtn flex items-center justify-center p-2 pointer 
     next-btn 
     flex-col
@@ -118,7 +118,7 @@ function navigateBack() {
   social.style.overflow = 'hidden'
   setTimeout(() => {
     router.push("/")
-  }, 600)
+  }, 650)
 }
 
 function downloadResume() {

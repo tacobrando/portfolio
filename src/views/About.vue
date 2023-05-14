@@ -1,5 +1,5 @@
 <template>
-  <div class="about animate__animated text-center overflow-auto" id="about">
+  <div class="about animate__animated text-center hide-scrollbar" id="about">
     <div class="
     pointer 
     next-btn 
@@ -80,7 +80,7 @@ function navigateBack() {
   about.style.overflow = 'hidden'
   setTimeout(() => {
     router.push("/")
-  }, 600)
+  }, 650)
 }
 </script>
 <style scoped lang="scss">
