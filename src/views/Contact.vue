@@ -89,7 +89,6 @@
         <a 
           :href="resume"
           class="
-            rounded 
             bg-red-500 
             p-2
             transition 

@@ -15,12 +15,11 @@
     lg:hover:shadow-2xl
     lg:hover:-translate-y-3 
     transition
-    rounded
     fade-in
   "
   >
     <span class="image-container">
-      <img id="project-img" class="image rounded" :src="imageUrl()">
+      <img id="project-img" class="image" :src="imageUrl()">
     </span>
     <div class="project-info flex flex-col justify-start items-center">
       <h1 class="p-2 text-xl font-bold">{{ data.title.toUpperCase() }}</h1>
@@ -29,11 +28,11 @@
       </div>
       <p class="text-sm p-4">{{ data.description }}</p>
       <span>
-        <button v-if="data.url" @click="redirect(data.url)" class="p-2 bg-sky-500 text-white rounded-lg cursor-pointer m-2 hover:opacity-70 transition delay-50">
+        <button v-if="data.url" style="background-color: #007CC7;" @click="redirect(data.url)" class="p-2 text-white cursor-pointer m-2 hover:opacity-70 transition delay-50">
           <i class="bi bi-box-arrow-up-right"></i>
           Visit
         </button>
-        <button @click="redirect(data.github)" class="p-2 bg-black text-white rounded-lg cursor-pointer m-2 hover:opacity-70 transition delay-50">
+        <button @click="redirect(data.github)" class="p-2 bg-black text-white cursor-pointer m-2 hover:opacity-70 transition delay-50">
           <i class="bi bi-github"></i>
           GitHub
         </button>

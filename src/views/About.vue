@@ -7,6 +7,7 @@
     flex-row-reverse
     w-full
     items-center
+    p-2
   ">
     <svg 
       id="back-btn"
@@ -52,11 +53,9 @@
         fade-in
       ">
           <img src="../assets/images/profile.png" alt="profile" 
-          class="rounded h-80 lg:hover:shadow-2xl
-          lg:hover:-translate-y-3 transition ease-in-out duration-200 delay-75 transform"
+          class="h-80"
           >
-          <span class="bg-white lg:ml-5 rounded p-5 lg:hover:shadow-2xl flex flex-col justify-between
-          lg:hover:-translate-y-3 transition ease-in-out duration-200 delay-75 transform">
+          <span class="bg-white lg:ml-5 p-5 flex flex-col justify-between">
             <p class="mb-3">
               My name is Matthew Yiew-Tung Lee, and I am a recent graduate from Oxford Brookes University with a Bachelor of Science in Anthropology. I also completed an Integrated Foundation Degree from Goldsmiths, University of London, and an International Baccalaureate (IB) Diploma from Renaissance College in Hong Kong.
             </p>
