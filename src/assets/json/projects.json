@@ -15,7 +15,7 @@
   {
     "title": "Pokedex",
     "description": "A recreation of the Pokemon Brilliant Diamond pokedex. Utilises custom made SVGs for certain assets for the scrollbar, background etc. The application uses the PokeApi to gather data for the pokedex. (Desktop only)",
-    "url": "https://pokedex-project-3244b.firebaseapp.com/",
+    "url": "https://pokedex-project-3244b.web.app",
     "image": "pokedex.png",
     "github": "https://github.com/tacobrando/pokedex-revised",
     "types": [
