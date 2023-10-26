@@ -1,6 +1,19 @@
 [
   {
-    "title": "Oxchibus",
+    "title": "Arcane Wonders",
+    "description": "Arcane Wonders is a unique Minecraft game plugin that introduces advanced teleportation portals, offering an innovative twist to the in-game experience. By providing a streamlined and user-friendly interface, players can now effortlessly utilize the teleport command to either join specific players, travel to predefined locations, or even explore random destinations. Within the first week of publishing this plugin on a renowned public plugin store, it garnered an impressive 26 downloads, underscoring its appeal to the Minecraft community.",
+    "url": "https://www.spigotmc.org/resources/arcanewonders-w-i-p.112078/",
+    "github": "https://github.com/tacobrando/ArcaneWonders",
+    "image": "arcanewonders.png",
+    "types": [
+      "kotlin",
+      "gradle",
+      "apache",
+      "jetbrains"
+    ]
+  },
+  {
+    "title": "OXCHIBUS",
     "description": "‘Oxford Chinese Businesses’ or ‘OXCHIBUS’ is a website dedicated to recording the history of the Chinese community in Oxfordshire, England. OXCHIBUS aims to record the history of Chinese owned businesses in Oxford between the year 1910 and 1990’s.",
     "url": "https://oxchibus.co.uk",
     "github": "https://github.com/tacobrando/OXCHIBUS",
@@ -13,20 +26,20 @@
     ]
   },
   {
-    "title": "Pokedex",
-    "description": "A recreation of the Pokemon Brilliant Diamond pokedex. Utilises custom made SVGs for certain assets for the scrollbar, background etc. The application uses the PokeApi to gather data for the pokedex. (Desktop only)",
-    "url": "https://pokedex-project-3244b.web.app",
-    "image": "pokedex.png",
-    "github": "https://github.com/tacobrando/pokedex-revised",
+    "title": "Lol Stats Reader",
+    "description": "Lol Stats Reader is a web app developed using Nuxt that enables users to retrieve their League of Legends match history. Due to the Riot API's restrictions, direct calls from the frontend are not possible, and a secret key is required for authentication. To address this, our Nuxt server-side handles the API requests, ensuring secure and efficient data retrieval. Users can search for any League of Legends username, select a region, and view detailed match history, player level, and more.",
+    "image": "lolstats.png",
+    "url": "http://guileless-puffpuff-c24618.netlify.app",
+    "github": "https://github.com/tacobrando/League-of-Legends-Stat-checker",
     "types": [
-      "vuejs",
-      "tailwindcss",
-      "javascript"
+      "nuxtjs",
+      "javascript",
+      "tailwindcss"
     ]
   },
   {
     "title": "CS50x Final Project",
-    "description": "The CS50 marketplace is my final project for CS50x. It is a simple e-commerce store for secondhand or homemade products. This is a fullstack application using Vue and Flask",
+    "description": "The CS50x Marketplace represents the culmination of my journey through the CS50x course. Crafted as a comprehensive e-commerce platform, it serves as a hub for those seeking distinctive secondhand items and handcrafted products. Built with Vue for the frontend and Flask powering the backend, this project encapsulates the full-stack skills and principles imparted throughout the course.",
     "image": "cs50.png",
     "github": "https://github.com/tacobrando/CS50x-Final-Project",
     "types": [
@@ -38,16 +51,15 @@
     ]
   },
   {
-    "title": "Lol Stats Checker",
-    "description": "LolStatsChecker is an app to search up League of Legends. The Riot api isn't accessible with calls to the frontend and require a secret key in order to work, therefore flask is used to handle the api calls, package and send information back to the frontend. The project allows you to search up any League of Legends username, select a region and show details of that players match history/level and etc.",
-    "image": "lolstats.png",
-    "github": "https://github.com/tacobrando/lol-stats-react",
+    "title": "Pokedex",
+    "description": "A recreation of the Pokemon Brilliant Diamond pokedex. Utilises custom made SVGs for certain assets for the scrollbar, background etc. The application uses the PokeApi to gather data for the pokedex. (Desktop only)",
+    "url": "https://pokedex-project-3244b.web.app",
+    "image": "pokedex.png",
+    "github": "https://github.com/tacobrando/pokedex-revised",
     "types": [
-      "react",
-      "bootstrap",
-      "javascript",
-      "python",
-      "flask"
+      "vuejs",
+      "tailwindcss",
+      "javascript"
     ]
   }
 ]
