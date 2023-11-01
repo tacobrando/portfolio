@@ -67,7 +67,7 @@
             ease-in-out
           "></i>
         </a>
-        <a href="mailto: matthewytlee2@icloud.com">
+        <a href="mailto: matthewytlee2@gmail.com">
           <i class="
             bi bi-envelope
             cursor-pointer 
@@ -108,7 +108,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-import resume from '../assets/cv/resume.pdf'
+import resume from '../assets/cv/Matthew Lee Junior Software Engineer.pdf'
 
 const router = useRouter()
 
@@ -119,9 +119,5 @@ function navigateBack() {
   setTimeout(() => {
     router.push("/")
   }, 650)
-}
-
-function downloadResume() {
-
 }
 </script>

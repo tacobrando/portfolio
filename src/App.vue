@@ -1,6 +1,10 @@
 <script setup>
 import { useRoute } from 'vue-router'
 import Navbar from './components/Navigation/Navbar.vue'
+import { ref, provide } from 'vue';
+
+const firstLoad = ref(true);
+provide('firstLoad', firstLoad);
 
 const route = useRoute()
 </script>

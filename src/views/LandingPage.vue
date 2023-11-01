@@ -1,32 +1,52 @@
 <script setup>
 import { useRouter } from 'vue-router';
 import Arrow from '../components/Navigation/Arrows/Arrow.vue'
+import { inject, onMounted, ref, watchEffect } from 'vue';
 
 const router = useRouter()
-
 function navigateTo(slug) {
   router.push(`/${slug}`)
 }
+
+const isRouteChange = ref(false);
+const firstLoad = inject('firstLoad');
+
+onMounted(() => {
+  if (firstLoad.value) {
+    setTimeout(() => {
+      firstLoad.value = false;
+    }, 4000);
+  }
+});
+
+watchEffect(() => {
+  const currentRoute = router.currentRoute.value;
+  if (currentRoute.path === '/') {
+    isRouteChange.value = true;
+    setTimeout(() => {
+      isRouteChange.value = false;
+    }, 1000);
+  }
+});
 </script>
+
 
 <template>
   <div
     id="landing-page" 
-    class="
-      animate__animated
-      landing-page 
-      grid 
-      grid-rows-3
-      grid-cols-3
-      text-2xl
+    :class="[
+      'animate__animated',
+      isRouteChange ? 'fade-in' : '',
+      'landing-page',
+      'grid',
+      'grid-rows-3',
+      'grid-cols-3',
+      'text-2xl'
+    ]
     "
   >
-    <div></div>
-    <div>
-      <!-- <Arrow @route-handler="navigateTo($event)" direction="-rotate-90" title="About" slug="about" /> -->
-    </div>
-    <div></div>
-    <Arrow @route-handler="navigateTo($event)" direction="rotate-180" title="About" slug="about" />
+    <div v-for="count in 3" :key="count"></div>
+    <Arrow @route-handler="navigateTo($event)" direction="rotate-180" title="About" slug="about" :load="firstLoad" />
     <ul class="
       font-light 
       text-center 
@@ -37,18 +57,18 @@ function navigateTo(slug) {
     "
     >
       <li>
-        <h1 class="fade-in">Hello!</h1>
+        <h1 :class="firstLoad ? 'fade-in' : ''">Hello!</h1>
       </li>
       <li>
-        <h1 class="fade-in">My name is Matthew Yiew-Tung Lee</h1>
+        <h1 :class="firstLoad ? 'fade-in' : ''">My name is Matthew Yiew-Tung Lee</h1>
       </li>
       <li>
-        <h1 class="fade-in">Software Engineer</h1>
+        <h1 :class="firstLoad ? 'fade-in' : ''">Software Engineer</h1>
       </li>
     </ul>
-    <Arrow @route-handler="navigateTo($event)" title="Portfolio" slug="portfolio" />
+    <Arrow @route-handler="navigateTo($event)" title="Portfolio" slug="portfolio" :load="firstLoad" />
     <div></div>
-    <Arrow @route-handler="navigateTo($event)" direction="rotate-90" title="Contact" slug="contact" />
+    <Arrow @route-handler="navigateTo($event)" direction="rotate-90" title="Contact" slug="contact" :load="firstLoad" />
     <div></div>
   </div>
 </template>
