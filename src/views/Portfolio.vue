@@ -1,14 +1,16 @@
-<script setup>
+<script setup lang="ts">
 import ProjectCard from '../components/Project/ProjectCard.vue';
-import projects from "../assets/json/projects.json"
+import projects from "@/assets/json/projects.json"
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
 function navigateBack() {
   const portfolio = document.getElementById("portfolio-page")
-  portfolio.classList.add("animate__fadeOutRightBig")
-  portfolio.style.overflow = 'hidden'
+  if(portfolio) {
+    portfolio.classList.add("animate__fadeOutRightBig")
+    portfolio.style.overflow = 'hidden'
+  }
   setTimeout(() => {
     router.push("/")
   }, 650)

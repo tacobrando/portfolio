@@ -106,18 +106,20 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useRouter } from 'vue-router'
-import resume from '../assets/cv/Matthew Lee Junior Software Engineer.pdf'
+import resume from '@/assets/cv/Matthew Lee Junior Software Engineer.pdf'
 
 const router = useRouter()
 
 function navigateBack() {
   const social = document.getElementById("social")
-  social.classList.add("animate__fadeOutDownBig")
-  social.style.overflow = 'hidden'
-  setTimeout(() => {
-    router.push("/")
-  }, 650)
+  if(social) {
+    social.classList.add("animate__fadeOutDownBig")
+    social.style.overflow = 'hidden'
+    setTimeout(() => {
+      router.push("/")
+    }, 650)
+  }
 }
 </script>

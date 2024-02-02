@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useRoute } from 'vue-router'
 import Navbar from './components/Navigation/Navbar.vue'
 import { ref, provide } from 'vue';

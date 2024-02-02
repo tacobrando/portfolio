@@ -1,15 +1,30 @@
 [
   {
+    "title": "HouseM8s",
+    "description": "HouseM8s is a web application designed to facilitate the management of household chores and tasks. It offers a user-friendly platform for assigning and tracking chores, setting reminders, and enabling collaboration among household members. The app aims to simplify the organization of daily responsibilities in a shared living space, promoting efficiency and teamwork. Developed with a focus on intuitive design and practical functionality, HouseM8s seeks to enhance the experience of managing shared household duties.",
+    "url": "https://housem8s-2082efe081e6.herokuapp.com/",
+    "github": "https://github.com/tacobrando/HouseM8s",
+    "image": "housem8s.png",
+    "types": [
+      "vuejs-plain",
+      "mongodb-plain",
+      "express-original",
+      "heroku-plain",
+      "tailwindcss-plain",
+      "socketio-original"
+    ]
+  },
+  {
     "title": "Arcane Wonders",
     "description": "Arcane Wonders is a unique Minecraft game plugin that introduces advanced teleportation portals, offering an innovative twist to the in-game experience. By providing a streamlined and user-friendly interface, players can now effortlessly utilize the teleport command to either join specific players, travel to predefined locations, or even explore random destinations. Within the first week of publishing this plugin on a renowned public plugin store, it garnered an impressive 26 downloads, underscoring its appeal to the Minecraft community.",
     "url": "https://www.spigotmc.org/resources/arcanewonders-w-i-p.112078/",
     "github": "https://github.com/tacobrando/ArcaneWonders",
     "image": "arcanewonders.png",
     "types": [
-      "kotlin",
-      "gradle",
-      "apache",
-      "jetbrains"
+      "kotlin-plain",
+      "gradle-plain",
+      "apache-plain",
+      "jetbrains-plain"
     ]
   },
   {
@@ -19,10 +34,10 @@
     "github": "https://github.com/tacobrando/OXCHIBUS",
     "image": "oxchibus.png",
     "types": [
-      "vuejs",
-      "tailwindcss",
-      "javascript",
-      "firebase"
+      "vuejs-plain",
+      "tailwindcss-plain",
+      "javascript-plain",
+      "firebase-plain"
     ]
   },
   {
@@ -32,9 +47,9 @@
     "url": "http://guileless-puffpuff-c24618.netlify.app",
     "github": "https://github.com/tacobrando/League-of-Legends-Stat-checker",
     "types": [
-      "nuxtjs",
-      "javascript",
-      "tailwindcss"
+      "nuxtjs-plain",
+      "javascript-plain",
+      "tailwindcss-plain"
     ]
   },
   {
@@ -43,11 +58,11 @@
     "image": "cs50.png",
     "github": "https://github.com/tacobrando/CS50x-Final-Project",
     "types": [
-      "vuejs",
-      "bootstrap",
-      "javascript",
-      "python",
-      "flask"
+      "vuejs-plain",
+      "bootstrap-plain",
+      "javascript-plain",
+      "python-plain",
+      "flask-plain"
     ]
   },
   {
@@ -57,9 +72,9 @@
     "image": "pokedex.png",
     "github": "https://github.com/tacobrando/pokedex-revised",
     "types": [
-      "vuejs",
-      "tailwindcss",
-      "javascript"
+      "vuejs-plain",
+      "tailwindcss-plain",
+      "javascript-plain"
     ]
   }
 ]

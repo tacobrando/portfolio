@@ -70,17 +70,19 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { useRouter } from 'vue-router'
 const router = useRouter()
 
 function navigateBack() {
   const about = document.getElementById("about")
-  about.classList.add("animate__fadeOutLeftBig")
-  about.style.overflow = 'hidden'
-  setTimeout(() => {
-    router.push("/")
-  }, 650)
+  if(about) {
+    about.classList.add("animate__fadeOutLeftBig")
+    about.style.overflow = 'hidden'
+    setTimeout(() => {
+      router.push("/")
+    }, 650)
+  }
 }
 </script>
 <style scoped lang="scss">

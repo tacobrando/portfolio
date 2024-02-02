@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useRoute } from 'vue-router';
 
 const props = defineProps({
@@ -12,7 +12,7 @@ const route = useRoute()
 
 function routeHandler() {
   const landingPage = document.getElementById("landing-page")
-  if(!props.load) {
+  if(landingPage &&!props.load) {
     if(route.path === "/" && props.direction == undefined) {
       landingPage.classList.add("animate__fadeOutLeftBig")
     } else if(route.path === "/" && props.direction === "rotate-180") {

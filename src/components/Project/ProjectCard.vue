@@ -24,7 +24,7 @@
     <div class="project-info flex flex-col justify-start items-center">
       <h1 class="p-2 text-xl font-bold">{{ data.title.toUpperCase() }}</h1>
       <div>
-        <i class="p-1 text-xl" v-for="(type, index) in data.types" :key="index" :class="'devicon-' + type + '-plain colored'"></i>
+        <i class="p-1 text-xl" v-for="(type, index) in data.types" :key="index" :class="'devicon-' + type + ' colored'"></i>
       </div>
       <p class="text-sm p-4">{{ data.description }}</p>
       <span>
@@ -32,7 +32,7 @@
           <i class="bi bi-box-arrow-up-right"></i>
           Visit
         </button>
-        <button @click="redirect(data.github)" class="p-2 bg-black text-white cursor-pointer m-2 hover:opacity-70 transition delay-50">
+        <button v-if="data.github" @click="redirect(data.github)" class="p-2 bg-black text-white cursor-pointer m-2 hover:opacity-70 transition delay-50">
           <i class="bi bi-github"></i>
           GitHub
         </button>
@@ -41,24 +41,19 @@
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  data: {
-    type: Object
-  },
-  imageUrl: {
-    type: String
-  },
-  index: {
-    type: Number
-  }
-})
+<script setup lang="ts">
+import { ProjectData } from '@/types/projectTypes';
 
-const imageUrl = () => {
+const props = defineProps<{
+  data: ProjectData,
+  index: number
+}>()
+
+const imageUrl = (): string => {
   return new URL(`../../assets/images/${props.data.image}`, import.meta.url).href
 }
 
-function redirect(url) {
+function redirect(url: string): void {
   window.open(url)
 }
 

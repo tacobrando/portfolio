@@ -1,21 +1,23 @@
-<script setup>
+<script setup lang="ts">
 import { useRouter } from 'vue-router';
 import Arrow from '../components/Navigation/Arrows/Arrow.vue'
-import { inject, onMounted, ref, watchEffect } from 'vue';
+import { inject, onMounted, ref, watchEffect, Ref } from 'vue';
 
 const router = useRouter()
-function navigateTo(slug) {
+function navigateTo(slug: string) {
   router.push(`/${slug}`)
 }
 
 const isRouteChange = ref(false);
-const firstLoad = inject('firstLoad');
+const firstLoad = inject<Ref<boolean>>('firstLoad');
 
 onMounted(() => {
-  if (firstLoad.value) {
+  if(firstLoad) {
+    if (firstLoad.value) {
     setTimeout(() => {
       firstLoad.value = false;
     }, 4000);
+  }
   }
 });
 
