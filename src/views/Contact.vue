@@ -105,7 +105,6 @@
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import resume from '@/assets/cv/Matthew Lee Junior Software Engineer.pdf'

@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import { useRoute } from 'vue-router';
-const route = useRoute()
-</script>
-
 <template>
   <div class="
       navbar
@@ -22,3 +17,7 @@ const route = useRoute()
   >
   </div>
 </template>
+<script setup lang="ts">
+import { useRoute } from 'vue-router';
+const route = useRoute()
+</script>

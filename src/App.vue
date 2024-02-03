@@ -1,3 +1,12 @@
+<template>
+  <div id="nav">
+    <Navbar />
+  </div>
+  <router-view 
+    :key="route.path" 
+    class="bg-secondary h-screen text-primary safari_only" 
+  />
+</template>
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import Navbar from './components/Navigation/Navbar.vue'
@@ -8,18 +17,6 @@ provide('firstLoad', firstLoad);
 
 const route = useRoute()
 </script>
-
-<template>
-  <div id="nav">
-    <Navbar />
-  </div>
-  <router-view 
-    :key="route.path" 
-    class="bg-secondary h-screen text-primary safari_only" 
-  />
-</template>
-
-
 <style>
 #nav a.router-link-exact-active {
   color: #42b983;

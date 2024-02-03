@@ -1,38 +1,3 @@
-<script setup lang="ts">
-import { useRouter } from 'vue-router';
-import Arrow from '../components/Navigation/Arrows/Arrow.vue'
-import { inject, onMounted, ref, watchEffect, Ref } from 'vue';
-
-const router = useRouter()
-function navigateTo(slug: string) {
-  router.push(`/${slug}`)
-}
-
-const isRouteChange = ref(false);
-const firstLoad = inject<Ref<boolean>>('firstLoad');
-
-onMounted(() => {
-  if(firstLoad) {
-    if (firstLoad.value) {
-    setTimeout(() => {
-      firstLoad.value = false;
-    }, 4000);
-  }
-  }
-});
-
-watchEffect(() => {
-  const currentRoute = router.currentRoute.value;
-  if (currentRoute.path === '/') {
-    isRouteChange.value = true;
-    setTimeout(() => {
-      isRouteChange.value = false;
-    }, 1000);
-  }
-});
-</script>
-
-
 <template>
   <div
     id="landing-page" 
@@ -74,4 +39,37 @@ watchEffect(() => {
     <div></div>
   </div>
 </template>
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+import Arrow from '../components/Navigation/Arrows/Arrow.vue'
+import { inject, onMounted, ref, watchEffect, Ref } from 'vue';
+
+const router = useRouter()
+const isRouteChange = ref(false);
+const firstLoad = inject<Ref<boolean>>('firstLoad');
+  
+function navigateTo(slug: string) {
+  router.push(`/${slug}`)
+}
+
+onMounted(() => {
+  if(firstLoad) {
+    if (firstLoad.value) {
+    setTimeout(() => {
+      firstLoad.value = false;
+    }, 4000);
+  }
+  }
+});
+
+watchEffect(() => {
+  const currentRoute = router.currentRoute.value;
+  if (currentRoute.path === '/') {
+    isRouteChange.value = true;
+    setTimeout(() => {
+      isRouteChange.value = false;
+    }, 1000);
+  }
+});
+</script>
 

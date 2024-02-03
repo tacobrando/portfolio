@@ -1,22 +1,3 @@
-<script setup lang="ts">
-import ProjectCard from '../components/Project/ProjectCard.vue';
-import projects from "@/assets/json/projects.json"
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
-function navigateBack() {
-  const portfolio = document.getElementById("portfolio-page")
-  if(portfolio) {
-    portfolio.classList.add("animate__fadeOutRightBig")
-    portfolio.style.overflow = 'hidden'
-  }
-  setTimeout(() => {
-    router.push("/")
-  }, 650)
-}
-</script>
-
 <template>
   <div class="portfolio animate__animated flex flex-col overflow-auto" id="portfolio-page">
     <div class="backBtn flex items-center p-2">
@@ -65,3 +46,21 @@ function navigateBack() {
     </div>
   </div>
 </template>
+<script setup lang="ts">
+import ProjectCard from '../components/Project/ProjectCard.vue';
+import projects from "@/assets/json/projects.json"
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function navigateBack() {
+  const portfolio = document.getElementById("portfolio-page")
+  if(portfolio) {
+    portfolio.classList.add("animate__fadeOutRightBig")
+    portfolio.style.overflow = 'hidden'
+  }
+  setTimeout(() => {
+    router.push("/")
+  }, 650)
+}
+</script>

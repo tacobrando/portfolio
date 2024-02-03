@@ -19,7 +19,7 @@
   "
   >
     <span class="image-container">
-      <img id="project-img" class="image" :src="imageUrl()">
+      <img id="project-img" class="image" :src="imageUrl()" :alt="data.title">
     </span>
     <div class="project-info flex flex-col justify-start items-center">
       <h1 class="p-2 text-xl font-bold">{{ data.title.toUpperCase() }}</h1>
@@ -40,7 +40,6 @@
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
 import { ProjectData } from '@/types/projectTypes';
 
@@ -56,22 +55,18 @@ const imageUrl = (): string => {
 function redirect(url: string): void {
   window.open(url)
 }
-
 </script>
 <style scoped>
 .image-container {
   width: 50%;
 }
-
 .image {
   width: 100%;
   height: 100%;
 }
-
 .project-info {
   width: 50%;
 }
-
 @media only screen and (max-width: 1000px) {
   .project-card {
     display: flex;
@@ -87,7 +82,6 @@ function redirect(url: string): void {
     width: 100%;
   }
 }
-
 .text {
   background-color: #04AA6D;
   color: white;

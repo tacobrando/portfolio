@@ -52,7 +52,7 @@
         rounded
         fade-in
       ">
-          <img src="../assets/images/profile.png" alt="profile" 
+          <img src="../assets/images/profile.webp" alt="profile" 
           class="h-80"
           >
           <span class="bg-white lg:ml-5 p-5 flex flex-col justify-between">
