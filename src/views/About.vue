@@ -63,7 +63,7 @@
               As for my skills, I have experience in web development, full-stack development, and programming languages such as JavaScript, Python, and HTML/CSS. I've also completed the CS50 Introduction to Computer Science course through HarvardX, earning a certificate in December 2022. My technical skills include Vue.js, React.js, Git, HTML5 & CSS, Tailwind, Bootstrap, Django, Flask, and Adonis.
             </p>
             <p class="mb-5"> 
-              In addition, I've had the opportunity to travel to different places, including Hong Kong, London, and Canada. Currently employed at Claims Gate as a junior software engineer.
+              In addition, I've had the opportunity to travel to different places, including Hong Kong, London, and Canada. Currently employed at <strong>Claims Gate</strong> as a junior software engineer.
             </p>
           </span>
         </span>
