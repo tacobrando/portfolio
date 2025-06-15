@@ -1,17 +1,16 @@
 [
   {
-    "title": "HouseM8s",
-    "description": "HouseM8s is a web application designed to facilitate the management of household chores and tasks. It offers a user-friendly platform for assigning and tracking chores, setting reminders, and enabling collaboration among household members. The app aims to simplify the organization of daily responsibilities in a shared living space, promoting efficiency and teamwork. Developed with a focus on intuitive design and practical functionality, HouseM8s seeks to enhance the experience of managing shared household duties.",
-    "url": "https://housem8s-2082efe081e6.herokuapp.com/",
-    "github": "https://github.com/tacobrando/HouseM8s",
-    "image": "housem8s.webp",
+    "title": "BoigerAI",
+    "description": "Hosted on a Raspberry Pi 5, this personal AI assistant lets you chat in the browser, view hidden “thoughts,” pick from available models, and save or discard sessions. The Pi’s modest ARM CPU cores and limited RAM mean it can only run tiny or quantized models locally—anything larger (including the on-device title-generation “think” model) falls back to a remote server—so response times and model choices are constrained. It’s really a proof of concept for fully self-hosted, edge-deployed AI, showcasing the end-to-end pipeline more than delivering production-grade performance.",
+    "url": "https://ai.matthewytlee.dev/",
+    "image": "boigerai.webp",
     "types": [
       "vuejs-plain",
-      "mongodb-plain",
-      "express-original",
-      "heroku-plain",
-      "tailwindcss-plain",
-      "socketio-original"
+      "typescript-plain",
+      "vitejs-plain",
+      "fastapi-plain",
+      "cloudflare-plain",
+      "sqlite-plain"
     ]
   },
   {
@@ -20,12 +19,7 @@
     "url": "https://www.spigotmc.org/resources/arcanewonders-w-i-p.112078/",
     "github": "https://github.com/tacobrando/ArcaneWonders",
     "image": "arcanewonders.webp",
-    "types": [
-      "kotlin-plain",
-      "gradle-plain",
-      "apache-plain",
-      "jetbrains-plain"
-    ]
+    "types": ["kotlin-plain", "gradle-plain", "apache-plain", "jetbrains-plain"]
   },
   {
     "title": "OXCHIBUS",
@@ -46,11 +40,7 @@
     "image": "lolstats.webp",
     "url": "http://guileless-puffpuff-c24618.netlify.app",
     "github": "https://github.com/tacobrando/League-of-Legends-Stat-checker",
-    "types": [
-      "nuxtjs-plain",
-      "javascript-plain",
-      "tailwindcss-plain"
-    ]
+    "types": ["nuxtjs-plain", "javascript-plain", "tailwindcss-plain"]
   },
   {
     "title": "CS50x Final Project",
@@ -71,10 +61,6 @@
     "url": "https://pokedex-project-3244b.web.app",
     "image": "pokedex.webp",
     "github": "https://github.com/tacobrando/pokedex-revised",
-    "types": [
-      "vuejs-plain",
-      "tailwindcss-plain",
-      "javascript-plain"
-    ]
+    "types": ["vuejs-plain", "tailwindcss-plain", "javascript-plain"]
   }
 ]
