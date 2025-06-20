@@ -31,7 +31,7 @@
     </h3>
 
     <div
-      class="about-card bg-neutral-900 text-gray-200 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 p-6 rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-[1.02] animate__animated animate__fadeInUp"
+      class="about-card bg-neutral-900 text-gray-200 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] animate__animated animate__fadeInUp"
     >
       <div class="flex-shrink-0 w-full lg:w-1/3 flex justify-center">
         <img

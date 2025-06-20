@@ -28,7 +28,7 @@
 
     <div class="flex items-center justify-center min-h-screen px-4">
       <div
-        class="w-full max-w-3xl bg-neutral-900 text-gray-200 flex flex-col items-center gap-6 p-6 rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-[1.02] animate__animated animate__fadeInUp"
+        class="w-full max-w-3xl bg-neutral-900 text-gray-200 flex flex-col items-center gap-6 p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-[1.02] animate__animated animate__fadeInUp"
       >
         <h3 class="text-3xl font-bold text-center">Contact & Socials</h3>
 
