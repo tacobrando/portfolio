@@ -1,8 +1,7 @@
 [
   {
     "title": "BoigerAI",
-    "description": "Hosted on a Raspberry Pi 5, this personal AI assistant lets you chat in the browser, view hidden “thoughts,” pick from available models, and save or discard sessions. The Pi’s modest ARM CPU cores and limited RAM mean it can only run tiny or quantized models locally—anything larger (including the on-device title-generation “think” model) falls back to a remote server—so response times and model choices are constrained. It’s really a proof of concept for fully self-hosted, edge-deployed AI, showcasing the end-to-end pipeline more than delivering production-grade performance.",
-    "url": "https://ai.matthewytlee.dev/",
+"description": "Hosted on a Raspberry Pi 5, this personal AI assistant runs tiny or quantized models locally and lets you add custom Ollama servers for larger models. Chat in your browser, view hidden “thoughts,” choose from available models, and save or discard sessions. It’s a concise proof-of-concept for fully self-hosted, edge-deployed AI.",    "url": "https://ai.matthewytlee.dev/",
     "image": "boigerai.webp",
     "types": [
       "vuejs-plain",

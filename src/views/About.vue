@@ -1,105 +1,108 @@
 <template>
-  <div class="about animate__animated text-center overflow-auto" id="about">
-    <div class="
-    pointer 
-    next-btn 
-    flex 
-    flex-row-reverse
-    w-full
-    items-center
-    p-2
-  ">
-    <svg 
-      id="back-btn"
-      @click="navigateBack"
-      class="
-        w-12 
-        cursor-pointer 
-        transform 
-        hover:text-gray-500
-        transition 
-        delay-75 
-        duration-200 
-        ease-in-out
-        " 
-        fill="none" 
-        stroke="currentColor" 
-        viewBox="0 0 24 24" 
+  <div
+    id="about"
+    class="about animate__animated animate__slideInLeft text-center overflow-auto px-4 py-6"
+  >
+    <!-- Back Button -->
+    <div class="pointer next-btn flex flex-row-reverse w-full items-center p-2">
+      <svg
+        id="back-btn"
+        @click="navigateBack"
+        class="w-12 cursor-pointer transform hover:text-gray-500 transition delay-75 duration-200 ease-in-out"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-    >
-      <path 
-        class="fade-in"
-        stroke-linecap="round" 
-        stroke-linejoin="round" 
-        stroke-width="2" 
-        d="M9 5l7 7-7 7"
       >
-      </path>
-    </svg>
-    <p class="hide">Back</p>
+        <path
+          class="fade-in"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"
+        ></path>
+      </svg>
+      <p class="hide">Back</p>
     </div>
-    <span class="w-full text-center text-3xl pb-2 fade-in">
-      <h3 class="text-3xl fade-in p-2">About Me</h3>
-    </span>
-    <div class="about-container flex flex-col items-center justify-center h-5/6 m-5 text-start">
-      <span class="profile-image
-        about-card 
-        m-5
-        text-black 
-        flex
-        flex-row
-        justify-start
-        rounded
-        fade-in
-      ">
-          <img src="../assets/images/profile.webp" alt="profile" 
-          class="h-80"
-          >
-          <span class="bg-white lg:ml-5 p-5 flex flex-col justify-between">
-            <p class="mb-3">
-              My name is Matthew Yiew-Tung Lee, and I am a recent graduate from Oxford Brookes University with a Bachelor of Science in Anthropology. I also completed an Integrated Foundation Degree from Goldsmiths, University of London, and an International Baccalaureate (IB) Diploma from Renaissance College in Hong Kong.
-            </p>
-            <p class="mb-3">
-              As for my skills, I have experience in web development, full-stack development, and programming languages such as JavaScript, Python, and HTML/CSS. I've also completed the CS50 Introduction to Computer Science course through HarvardX, earning a certificate in December 2022. My technical skills include Vue.js, React.js, Git, HTML5 & CSS, Tailwind, Bootstrap, Django, Flask, and Adonis.
-            </p>
-            <p class="mb-5"> 
-              In addition, I've had the opportunity to travel to different places, including Hong Kong, London, and Canada. Currently employed at <strong>Claims Gate</strong> as a junior software engineer.
-            </p>
-          </span>
-        </span>
+
+    <!-- Title -->
+    <h3
+      class="text-3xl font-bold text-center mb-8 animate__animated animate__fadeInDown"
+    >
+      About Me
+    </h3>
+
+    <!-- Card Container -->
+    <div
+      class="about-card bg-neutral-900 text-gray-200 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 p-6 rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-[1.02] animate__animated animate__fadeInUp"
+    >
+      <!-- Profile Image -->
+      <div class="flex-shrink-0 w-full lg:w-1/3 flex justify-center">
+        <img
+          src="../assets/images/profile.webp"
+          alt="profile"
+          class="rounded-lg object-cover h-80 w-full max-w-xs animate__animated animate__zoomIn"
+        />
+      </div>
+
+      <!-- About Content -->
+      <div
+        class="w-full lg:w-2/3 flex flex-col justify-between gap-4 text-left"
+      >
+        <p>
+          My name is <strong>Matthew Yiew-Tung Lee</strong>, and I am a recent
+          graduate from Oxford Brookes University with a Bachelor of Science in
+          Anthropology. I also completed an Integrated Foundation Degree from
+          Goldsmiths, University of London, and an International Baccalaureate
+          (IB) Diploma from Renaissance College in Hong Kong.
+        </p>
+        <p>
+          As for my skills, I have experience in web development, full-stack
+          development, and programming languages such as JavaScript, Python, and
+          HTML/CSS. I've also completed the CS50 Introduction to Computer
+          Science course through HarvardX, earning a certificate in December
+          2022. My technical skills include Vue.js, React.js, Git, HTML5 & CSS,
+          Tailwind, Bootstrap, Django, Flask, and Adonis.
+        </p>
+        <p>
+          In addition, I've had the opportunity to travel to different places,
+          including Hong Kong, London, and Canada. I’m currently looking forward
+          to new opportunities where I can continue growing as a developer and
+          contributing to impactful projects.
+        </p>
+      </div>
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
-const router = useRouter()
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 function navigateBack() {
-  const about = document.getElementById("about")
-  if(about) {
-    about.classList.add("animate__fadeOutLeftBig")
-    about.style.overflow = 'hidden'
+  const page = document.getElementById("about");
+  if (page) {
+    page.classList.remove("animate__slideInLeft");
+    page.classList.add("animate__slideOutLeft");
+    page.style.overflow = "hidden";
     setTimeout(() => {
-      router.push("/")
-    }, 650)
+      router.push({ path: "/", query: { from: "about" } });
+    }, 600);
   }
 }
 </script>
+
 <style scoped lang="scss">
-@media only screen and (max-width: 1000px) {
-  .about-container {
-    height: auto;
-  }
+@media (max-width: 1024px) {
   .about-card {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    text-align: center;
 
     img {
-      height: 50%;
-      width: 50%;
-      margin-bottom: 20px;
+      width: 75%;
+      height: auto;
     }
   }
 }

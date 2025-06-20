@@ -1,44 +1,36 @@
 <template>
-  <div class="portfolio animate__animated flex flex-col overflow-auto" id="portfolio-page">
+  <div
+    class="portfolio animate__animated animate__slideInRight flex flex-col overflow-auto"
+    id="portfolio-page"
+  >
     <div class="backBtn flex items-center p-2">
-      <svg 
+      <svg
         id="back-btn"
         @click="navigateBack"
-        class="
-          w-12 
-          cursor-pointer 
-          transform 
-          hover:text-gray-500
-          rotate-180
-          transition 
-          delay-75 
-          duration-200 
-          ease-in-out
-        " 
-        fill="none" 
-        stroke="currentColor" 
-        viewBox="0 0 24 24" 
+        class="w-12 cursor-pointer transform hover:text-gray-500 rotate-180 transition delay-75 duration-200 ease-in-out"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path 
+        <path
           class="fade-in"
-          stroke-linecap="round" 
-          stroke-linejoin="round" 
-          stroke-width="2" 
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
           d="M9 5l7 7-7 7"
-        >
-        </path> 
+        ></path>
       </svg>
-      <p class="hide">Back</p>   
+      <p class="hide">Back</p>
     </div>
     <span class="w-full text-center text-3xl pb-2 fade-in">
       <h1>Portfolio</h1>
     </span>
-    <div class="project-container flex flex-col items-center m-5">
-      <ProjectCard 
+    <div class="project-container flex flex-col items-center justify-center">
+      <ProjectCard
         v-for="(project, index) in projects"
         id="project-card"
-        :key="index" 
+        :key="index"
         :data="project"
         :index="index"
         :imageUrl="`../../assets/images/${project.image}`"
@@ -47,20 +39,21 @@
   </div>
 </template>
 <script setup lang="ts">
-import ProjectCard from '../components/Project/ProjectCard.vue';
-import projects from "@/assets/json/projects.json"
-import { useRouter } from 'vue-router'
+import ProjectCard from "../components/Project/ProjectCard.vue";
+import projects from "@/assets/json/projects.json";
+import { useRouter } from "vue-router";
 
-const router = useRouter()
+const router = useRouter();
 
 function navigateBack() {
-  const portfolio = document.getElementById("portfolio-page")
-  if(portfolio) {
-    portfolio.classList.add("animate__fadeOutRightBig")
-    portfolio.style.overflow = 'hidden'
+  const page = document.getElementById("portfolio-page");
+  if (page) {
+    page.classList.remove("animate__slideInRight");
+    page.classList.add("animate__slideOutRight");
+    page.style.overflow = "hidden";
+    setTimeout(() => {
+      router.push({ path: "/", query: { from: "portfolio" } });
+    }, 600);
   }
-  setTimeout(() => {
-    router.push("/")
-  }, 650)
 }
 </script>

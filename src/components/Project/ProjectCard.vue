@@ -1,52 +1,58 @@
 <template>
   <div
-    class="project-card w-full m-5 bg-white text-black flex transform justify-start delay-75 duration-200 ease-in-out items-center lg:hover:shadow-2xl lg:hover:-translate-y-3 transition fade-in"
+    class="project-card animate__animated animate__fadeInUp w-full max-w-6xl m-4 p-4 bg-neutral-900 text-gray-200 flex flex-col lg:flex-row gap-6 items-start shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out rounded-xl"
+    :style="{ animationDelay: `${index * 100}ms` }"
   >
-    <span class="image-container h-[300px] w-[500px] overflow-hidden">
-      <img id="project-img" class="image" :src="imageUrl()" :alt="data.title" />
-    </span>
-    <div
-      class="project-info w-full flex flex-col justify-start items-start ml-4"
-    >
-      <div class="flex flex-col lg:items-start items-center lg:mt-0 mt-2">
-        <div>
-          <h1 class="mb-4 text-2xl font-bold">
-            {{ data.title.toUpperCase() }}
-          </h1>
+    <!-- Image Section -->
+    <div class="w-full lg:w-1/2 overflow-hidden rounded-lg aspect-video">
+      <img
+        class="w-full h-full object-cover"
+        :src="imageUrl()"
+        :alt="data.title"
+      />
+    </div>
 
+    <!-- Info Section -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-between">
+      <div>
+        <h1 class="text-2xl font-bold mb-2 text-center lg:text-left">
+          {{ data.title.toUpperCase() }}
+        </h1>
+
+        <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-4">
           <i
-            class="mr-2 text-xl"
             v-for="(type, index) in data.types"
             :key="index"
-            :class="'devicon-' + type + ' colored'"
+            :class="'devicon-' + type + ' colored text-2xl'"
           ></i>
         </div>
-        <p class="text-sm mt-4 mr-4">{{ data.description }}</p>
+
+        <p class="text-sm text-center lg:text-left">
+          {{ data.description }}
+        </p>
       </div>
-      <div
-        class="flex flex-row gap-4 mt-4 lg:mb-0 mb-4 items-center w-full lg:justify-start justify-center"
-      >
+
+      <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-6">
         <button
           v-if="data.url"
-          style="background-color: #007cc7"
           @click="redirect(data.url)"
-          class="p-2 text-white cursor-pointer hover:opacity-70 transition delay-50"
+          class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
         >
-          <i class="bi bi-box-arrow-up-right"></i>
-          Visit
+          <i class="bi bi-box-arrow-up-right mr-2"></i>Visit
         </button>
+
         <button
           v-if="data.github"
           @click="redirect(data.github)"
-          class="p-2 bg-black text-white cursor-pointer hover:opacity-70 transition delay-50"
+          class="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
         >
-          <i class="bi bi-github"></i>
-          GitHub
+          <i class="bi bi-github mr-2"></i>GitHub
         </button>
       </div>
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
 import { ProjectData } from "@/types/projectTypes";
 
@@ -61,34 +67,15 @@ const imageUrl = (): string => {
 };
 
 function redirect(url: string): void {
-  window.open(url);
+  window.open(url, "_blank");
 }
 </script>
+
 <style scoped>
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-@media only screen and (max-width: 1000px) {
-  .project-card {
-    display: flex;
-    flex-direction: column;
-  }
-  .image-container {
-    width: 100%;
-  }
-  .project-info {
-    width: 100%;
-  }
-  .image {
-    width: 100%;
-  }
-}
-.text {
-  background-color: #04aa6d;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
+.project-card:hover {
+  transform: scale(1.03);
 }
 </style>

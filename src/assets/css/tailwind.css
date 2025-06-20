@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 #app {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-html, body{
-  background-color: #007CC7;
+html,
+body {
+  background-color: #0f172a;
   color: white;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
   .safari_only {
-      padding-bottom: 70px;
+    padding-bottom: 70px;
   }
 }
 
