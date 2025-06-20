@@ -3,7 +3,6 @@
     class="social animate__animated animate__slideInUp overflow-auto min-h-screen relative"
     id="social"
   >
-    <!-- Back Button (top center) -->
     <div
       class="absolute top-4 left-1/2 -translate-x-1/2 flex flex-col items-center"
     >
@@ -27,15 +26,12 @@
       <p class="hide">Back</p>
     </div>
 
-    <!-- Centered Card Container -->
     <div class="flex items-center justify-center min-h-screen px-4">
       <div
         class="w-full max-w-3xl bg-neutral-900 text-gray-200 flex flex-col items-center gap-6 p-6 rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-[1.02] animate__animated animate__fadeInUp"
       >
-        <!-- Title -->
         <h3 class="text-3xl font-bold text-center">Contact & Socials</h3>
 
-        <!-- Icons -->
         <div class="flex justify-center text-4xl gap-6">
           <a
             href="https://www.linkedin.com/in/matthew-lee-b9583b199/"
@@ -59,7 +55,6 @@
           </a>
         </div>
 
-        <!-- Resume Download -->
         <div class="text-center">
           <h4 class="text-xl mb-2">Resume / CV</h4>
           <a

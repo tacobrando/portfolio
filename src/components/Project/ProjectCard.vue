@@ -3,7 +3,6 @@
     class="project-card animate__animated animate__fadeInUp w-full max-w-6xl m-4 p-4 bg-neutral-900 text-gray-200 flex flex-col lg:flex-row gap-6 items-start shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out rounded-xl"
     :style="{ animationDelay: `${index * 100}ms` }"
   >
-    <!-- Image Section -->
     <div class="w-full lg:w-1/2 overflow-hidden rounded-lg aspect-video">
       <img
         class="w-full h-full object-cover"
@@ -12,7 +11,6 @@
       />
     </div>
 
-    <!-- Info Section -->
     <div class="w-full lg:w-1/2 flex flex-col justify-between">
       <div>
         <h1 class="text-2xl font-bold mb-2 text-center lg:text-left">

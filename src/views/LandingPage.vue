@@ -13,7 +13,6 @@
   >
     <div v-for="count in 3" :key="count"></div>
 
-    <!-- Arrow: About (left) -->
     <div
       class="flex justify-center items-center cursor-pointer animate__animated animate__fadeInLeft animate__delay-0.3s"
       @click="navigateTo('about')"
@@ -21,7 +20,6 @@
       <ArrowIcon rotation="rotate-180" title="About" />
     </div>
 
-    <!-- Greeting -->
     <ul
       class="font-light text-center flex flex-col items-center justify-center"
     >
@@ -42,7 +40,6 @@
       </li>
     </ul>
 
-    <!-- Arrow: Portfolio (right) -->
     <div
       class="flex justify-center items-center cursor-pointer animate__animated animate__fadeInRight animate__delay-0.5s"
       @click="navigateTo('portfolio')"
@@ -52,7 +49,6 @@
 
     <div></div>
 
-    <!-- Arrow: Contact (down) -->
     <div
       class="flex justify-center items-center cursor-pointer animate__animated animate__fadeInUp animate__delay-0.7s"
       @click="navigateTo('contact')"
@@ -78,7 +74,6 @@ const enterAnimation = ref("");
 
 onMounted(() => {
   const from = route.query.from;
-  console.log(from);
   if (from === "about") {
     enterAnimation.value = "animate__slideInRight";
   } else if (from === "portfolio") {

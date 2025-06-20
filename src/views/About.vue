@@ -3,7 +3,6 @@
     id="about"
     class="about animate__animated animate__slideInLeft text-center overflow-auto px-4 py-6"
   >
-    <!-- Back Button -->
     <div class="pointer next-btn flex flex-row-reverse w-full items-center p-2">
       <svg
         id="back-btn"
@@ -25,18 +24,15 @@
       <p class="hide">Back</p>
     </div>
 
-    <!-- Title -->
     <h3
       class="text-3xl font-bold text-center mb-8 animate__animated animate__fadeInDown"
     >
       About Me
     </h3>
 
-    <!-- Card Container -->
     <div
       class="about-card bg-neutral-900 text-gray-200 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 p-6 rounded-xl shadow-md hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-[1.02] animate__animated animate__fadeInUp"
     >
-      <!-- Profile Image -->
       <div class="flex-shrink-0 w-full lg:w-1/3 flex justify-center">
         <img
           src="../assets/images/profile.webp"
@@ -45,7 +41,6 @@
         />
       </div>
 
-      <!-- About Content -->
       <div
         class="w-full lg:w-2/3 flex flex-col justify-between gap-4 text-left"
       >
